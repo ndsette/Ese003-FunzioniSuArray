@@ -7,8 +7,9 @@ int massimo(int valori[], int dimensione);
 int minimo(int valori[], int dimensione);
 float media(int valori[], int dimensione);
 
+
 int main(int argc, char** argv) {
-    int i;
+    int i,somma;
     int numeri[N];
     int max, min;
     float med;
@@ -31,17 +32,33 @@ int main(int argc, char** argv) {
 }
 
 int massimo(int valori[], int dimensione){
-    // TODO Implementare il corpo della funzione
-    return 0;
+    int i=0;
+    int max=valori[i];
+    for (i=1;i<N;i++) {
+        if (valori[i]>max) {
+                      max=valori[i];
+            }
+        }
+    return max;
 }
 
 int minimo(int valori[], int dimensione){
-    // TODO Implementare il corpo della funzione
-    return 0;
+    int i=0;
+    int min=valori[i];
+    for (i=1;i<N;i++) {
+        if (valori[i]<min) {
+                      min=valori[i];
+            }
+        }
+    return min;
 }
 
 float media(int valori[], int dimensione){
-    // TODO Implementare il corpo della funzione
-    return 0;
+    int i,somma,med;
+    somma=0;
+    for (i=0; i<N;i++) {
+        somma=somma+valori[i];
+        }
+    med=somma/N;
+    return med;
 }
-
